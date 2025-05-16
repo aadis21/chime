@@ -19,7 +19,7 @@
   </b>
   <br />
   <span>as the name might suggest.</span>
-</p>
+</p
 
 ---
 
