@@ -1,3 +1,4 @@
+
 import { HomePageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
@@ -412,7 +413,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/pages/home/Chime-reviews.png",
+          src: "/static/pages/home/chime-reviews.png",
           alt: "Chime Reviews",
           originalSize: [884, 568],
           width: {
