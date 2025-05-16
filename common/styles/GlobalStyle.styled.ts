@@ -54,9 +54,12 @@ const GlobalStyle = createGlobalStyle`
 
   #tidio-chat {
   position: fixed !important;
-  bottom: 24px !important;
-  right: 24px !important;
-  z-index: 999999 !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+  height: 90vh !important; /* 👈 adjust this as needed */
+  width: 400px !important;
   transform: none !important;
 
   /* 🔥 Disable pointer events for container itself */
@@ -64,8 +67,8 @@ const GlobalStyle = createGlobalStyle`
 }
 
 #tidio-chat iframe {
-  height: auto !important;
-  max-height: 90vh !important;
+  // height: auto !important;
+  max-height: 200px !important;
   width: auto !important;
   max-width: 100vw !important;
 
