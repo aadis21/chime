@@ -31,7 +31,7 @@ const Footer: FC = () => {
           <Styled.HorizontalLine hideAt={BREAKPOINTS.LG} />
 
           <Styled.SocialSection>
-            <a href="https://apps.apple.com/us/app/chime-banking/id836215269">
+            <a href="https://apps.apple.com/us/app/Chime-banking/id836215269">
               <Image
                 src="/static/components/Footer/app-store.png"
                 alt="Chime App Store Download"
@@ -40,7 +40,7 @@ const Footer: FC = () => {
               />
             </a>
 
-            <a href="https://play.google.com/store/apps/details?id=com.onedebit.chime&hl=en">
+            <a href="https://play.google.com/store/apps/details?id=com.onedebit.Chime&hl=en">
               <Image
                 src="/static/components/Footer/google-play.png"
                 alt="Chime Google Play Download"
@@ -50,7 +50,7 @@ const Footer: FC = () => {
             </a>
 
             <Styled.IconWrapper>
-              <a href="https://www.facebook.com/chime">
+              <a href="https://www.facebook.com/Chime">
                 <Image
                   src="/static/components/Footer/facebook-bw.png"
                   alt="Chime Facebook"
@@ -61,7 +61,7 @@ const Footer: FC = () => {
             </Styled.IconWrapper>
 
             <Styled.IconWrapper>
-              <a href="https://twitter.com/chime">
+              <a href="https://twitter.com/Chime">
                 <Image
                   src="/static/components/Footer/twitter-bw.png"
                   alt="Chime Twitter"

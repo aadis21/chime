@@ -27,7 +27,7 @@ const FaqPage: NextPageWithLayout = () => {
 
         <ChimeFinancialComponents.Banner.ImageWrapper>
           <Image
-            src="/static/pages/chime-financial/community-hero.png"
+            src="/static/pages/Chime-financial/community-hero.png"
             alt="Community Hero"
             width={785}
             height={400}
@@ -193,7 +193,7 @@ const FaqPage: NextPageWithLayout = () => {
               🙋🏽‍♀️ <b>Chime in</b>
               <br />
               As owners, we have an obligation to speak up. We share our ideas,
-              ask hard questions, and give candid feedback. When others chime
+              ask hard questions, and give candid feedback. When others Chime
               in, we value what they have to say.
             </p>
 

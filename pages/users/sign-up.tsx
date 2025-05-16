@@ -68,7 +68,7 @@ const LogInPage: NextPageWithLayout = () => {
         <Link href="/">
           <a>
             <Image
-              src="/static/components/Header/chime-logo.svg"
+              src="/static/components/Header/Chime-logo.png"
               alt="Chime Logo"
               width="130px"
               height="39px"

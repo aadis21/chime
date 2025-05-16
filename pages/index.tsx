@@ -412,7 +412,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/pages/home/chime-reviews.png",
+          src: "/static/pages/home/Chime-reviews.png",
           alt: "Chime Reviews",
           originalSize: [884, 568],
           width: {

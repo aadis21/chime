@@ -185,7 +185,7 @@ const FaqPage: NextPageWithLayout = () => {
             <p>
               If you don&apos;t have your Chime Visa Debit Card within 10
               business days after opening your Checking Account, please contact
-              our Member Services team at: support@chime.com
+              our Member Services team at: support@Chime.com
             </p>
           </Disclosure>
 

@@ -19,7 +19,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/pages/second-chance-banking/chime-app-and-card.png",
+          src: "/static/pages/second-chance-banking/Chime-app-and-card.png",
           alt: "Shield",
           originalSize: [964, 1024],
           width: {

@@ -13,7 +13,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
   },
   {
     label: "Who we are",
-    path: "/chime-financial",
+    path: "/Chime-financial",
     subitems: [],
   },
   {
@@ -21,14 +21,6 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
     path: "/faq",
     subitems: [],
   },
-
- {
-    label: "Learn",
-    path: "/faq",
-    subitems: [],
-  },
-
-
 
 
 ];

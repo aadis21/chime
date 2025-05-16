@@ -8,7 +8,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**.chime.com",
+        hostname: "**.Chime.com",
       },
     ],
   },

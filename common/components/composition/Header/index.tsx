@@ -1,8 +1,6 @@
-import * as Styled from "./styled";
-
 import type { FC } from "react";
-
 import { useState, useEffect, useRef } from "react";
+import * as Styled from "./styled";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -36,16 +34,22 @@ const Header: FC = () => {
     return () => events.off("routeChangeComplete", closeModal);
   }, [events]);
 
+  const openTidioChat = () => {
+    if (typeof window !== "undefined" && (window as any).tidioChatApi?.open) {
+      (window as any).tidioChatApi.open();
+    }
+  };
+
   return (
     <>
       <Styled.Header>
         <Link href="/">
           <h1>
             <Image
-              src="/static/components/Header/chime-logo.svg"
+              src="/static/components/Header/chime-logo.png"
               alt="Chime Logo"
-              width="90px"
-              height="30px"
+              width={90}
+              height={30}
             />
           </h1>
         </Link>
@@ -63,21 +67,20 @@ const Header: FC = () => {
                     <InactiveSpan width={2}>{item.label}</InactiveSpan>
                   </Styled.Span>
                 )}
-
-                <Styled.SubmenuContainerDesktop>
-                 
-                </Styled.SubmenuContainerDesktop>
+                <Styled.SubmenuContainerDesktop />
               </li>
             ))}
           </menu>
         </Styled.MenuContainerDesktop>
 
         <nav>
-        
-            <Link href="/users/sign-up">
-              <Styled.Button>Sign In</Styled.Button>
-            </Link>
-         
+          <Link href="/users/sign-up">
+            <Styled.Button>Sign In</Styled.Button>
+          </Link>
+
+          <Styled.Button onClick={openTidioChat}>
+            Contact Us
+          </Styled.Button>
 
           <IconSVG
             onClick={() =>
@@ -98,10 +101,10 @@ const Header: FC = () => {
           <Link href="/">
             <h1>
               <Image
-                src="/static/components/Header/chime-logo.svg"
+                src="/static/components/Header/chime-logo.png"
                 alt="Chime Logo"
-                width="90px"
-                height="30px"
+                width={90}
+                height={30}
               />
             </h1>
           </Link>
@@ -130,8 +133,6 @@ const Header: FC = () => {
                 ) : (
                   <InactiveSpan width={2}>{item.label}</InactiveSpan>
                 )}
-
-                
               </li>
             ))}
           </menu>

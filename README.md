@@ -3,19 +3,19 @@
 > [archived Chime website](/assets/comparison.md).
 
 <p align="center">
-  <a href="https://chime-clone.vercel.app/" target="_blank">
+  <a href="https://Chime-clone.vercel.app/" target="_blank">
     <img
       alt="Chime Clone"
       title="Chime Clone"
-      src="/assets/chime-clone-logo.svg"
+      src="/assets/Chime-clone-logo.svg"
       width="300"
       style="max-width: 100%;"
     /.
   </a>
   <br /><br />
   <b align="center">
-    <a href="https://chime-clone.vercel.app/">Clone</a> of the
-    <a href="https://www.chime.com/">Chime</a> website;
+    <a href="https://Chime-clone.vercel.app/">Clone</a> of the
+    <a href="https://www.Chime.com/">Chime</a> website;
   </b>
   <br />
   <span>as the name might suggest.</span>
@@ -34,7 +34,7 @@
 
 ## Introduction 👀
 
-Chime Clone is a clone of the [Chime](https://www.chime.com/) website developed
+Chime Clone is a clone of the [Chime](https://www.Chime.com/) website developed
 solely by [@kon-pas](https://github.com/kon-pas) with the purpose of
 **self-learning web development**.
 
@@ -47,8 +47,8 @@ _WordPress_ website.
 **Head to [comparison.md](/assets/comparison.md) for the comparison index,
 including archived Chime website.**
 
-Alternatively, visit [Chime Clone](https://chime-clone.vercel.app/) &
-[Chime Originial](https://www.chime.com/).
+Alternatively, visit [Chime Clone](https://Chime-clone.vercel.app/) &
+[Chime Originial](https://www.Chime.com/).
 
 ## Tech Stack 💻
 
@@ -109,7 +109,7 @@ Even though, writing all components by myself was a great exercise.
 
 ## Credits 👥
 
-All credits go to the original [Chime](https://www.chime.com/) website.
+All credits go to the original [Chime](https://www.Chime.com/) website.
 
 ## License 📝
 
