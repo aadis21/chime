@@ -1,5 +1,5 @@
-
 import { HomePageComponents } from "@components/pages";
+export * as ChimeFinancialComponents from "./chime-financial";
 
 import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "@types";
@@ -24,7 +24,7 @@ const HomePage: NextPageWithLayout = () => {
     <>
       <Head>
         <title>
-          Chime - Banking with No Monthly Fees. Fee-Free Overdraft. Build Craft.
+          Start Building Credit with ChimePay
         </title>
         <meta name="description" content="Chime Clone Home Page" />
       </Head>
@@ -44,7 +44,7 @@ const HomePage: NextPageWithLayout = () => {
               coverBreakpoint: 70,
             }}
           >
-            <h1>#1 most loved banking app</h1>
+            <h1>ChimePay: Your All-in-One Payment Gateway</h1>
 
             <EnrollForm
               direction="mixed"
@@ -53,8 +53,7 @@ const HomePage: NextPageWithLayout = () => {
 
             <small>Already have an account?</small>
             <small>
-              Learn how we collect and use your information by visiting our
-              Privacy Policy
+              Learn how ChimePay collects, stores, and protects your information in our
             </small>
             <small>
               Chime is a financial technology company, not a bank. Banking
@@ -74,7 +73,7 @@ const HomePage: NextPageWithLayout = () => {
               coverBreakpoint: 60,
             }}
           >
-            <h1>Build credit history with no annual fees or interest</h1>
+            <h1>Build Credit & Earn Rewards with ChimePay</h1>
 
             <EnrollForm
               direction="mixed"
@@ -83,8 +82,7 @@ const HomePage: NextPageWithLayout = () => {
 
             <small>Already have an account?</small>
             <small>
-              Learn how we collect and use your information by visiting our
-              Privacy Policy
+              Learn how ChimePay collects, stores, and protects your information in our
             </small>
             <small>
               Chime is a financial technology company, not a bank. Banking
@@ -105,7 +103,7 @@ const HomePage: NextPageWithLayout = () => {
             }}
           >
             <h1>
-              Fee-free overdraft up to $200<sup>1</sup>
+              ChimePay for USA Customers – Simple & Secure<sup>1</sup>
             </h1>
 
             <EnrollForm
@@ -115,8 +113,7 @@ const HomePage: NextPageWithLayout = () => {
 
             <small>Already have an account?</small>
             <small>
-              Learn how we collect and use your information by visiting our
-              Privacy Policy
+              Learn how ChimePay collects, stores, and protects your information in our
             </small>
             <small>
               Chime is a financial technology company, not a bank. Banking
@@ -147,8 +144,7 @@ const HomePage: NextPageWithLayout = () => {
 
             <small>Already have an account?</small>
             <small>
-              Learn how we collect and use your information by visiting our
-              Privacy Policy
+              Learn how ChimePay collects, stores, and protects your information in our
             </small>
             <small>
               Chime is a financial technology company, not a bank. Banking
@@ -177,8 +173,7 @@ const HomePage: NextPageWithLayout = () => {
 
             <small>Already have an account?</small>
             <small>
-              Learn how we collect and use your information by visiting our
-              Privacy Policy
+              Learn how ChimePay collects, stores, and protects your information in our
             </small>
             <small>
               Chime is a financial technology company, not a bank. Banking
@@ -413,7 +408,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/pages/home/chime-reviews.png",
+          src: "/static/pages/home/Chime-reviews.png",
           alt: "Chime Reviews",
           originalSize: [884, 568],
           width: {
