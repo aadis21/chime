@@ -13,8 +13,8 @@ const DebitCardPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Free Visa Debit Card | Chime</title>
-        <meta name="description" content="Chime Clone Debit Card" />
+        <title>Free Visa Debit Card | ChimePay </title>
+        <meta name="description" content="ChimePay  Clone Debit Card" />
       </Head>
 
       {/* 1 */}
@@ -30,10 +30,10 @@ const DebitCardPage: NextPageWithLayout = () => {
           },
         }}
       >
-        <small>Chime Debit Card</small>
+        <small>ChimePay  Debit Card</small>
 
         <h1>
-          Chime Checking Account and Visa<sup>®</sup> Debit Card
+          ChimePay  Checking Account and Visa<sup>®</sup> Debit Card
         </h1>
 
         <ul>
@@ -95,7 +95,7 @@ const DebitCardPage: NextPageWithLayout = () => {
         <h2>Grow your savings as you spend</h2>
 
         <p>
-          Saving money is a no-brainer through Chime online banking. Every time
+          Saving money is a no-brainer through ChimePay  online banking. Every time
           you swipe your debit card, we round up to the nearest dollar and
           transfer the round-up from your Checking Account straight into your
           Savings Account. A magical, little way to make your money grow over
@@ -123,10 +123,10 @@ const DebitCardPage: NextPageWithLayout = () => {
         </h2>
 
         <p>
-          Avoid out of network ATM fees. With Chime, you get access to 60,000+
+          Avoid out of network ATM fees. With ChimePay , you get access to 60,000+
           fee-free ATMs—more than the top 3 national banks combined! Find them
           at stores you love, like Walgreens®, CVS®, and 7-Eleven®. You can also
-          use the map in your Chime app to find the closest fee-free ATM near
+          use the map in your ChimePay  app to find the closest fee-free ATM near
           you.
         </p>
 
@@ -155,7 +155,7 @@ const DebitCardPage: NextPageWithLayout = () => {
         <h2>You&apos;re always in control</h2>
 
         <p>
-          Can&apos;t find your Chime debit card? No worries. You can instantly
+          Can&apos;t find your ChimePay  debit card? No worries. You can instantly
           disable transactions in the app. No need to call us or explain
           yourself. And if you need a replacement card, just let us know. Debit
           card replacement is always free!

@@ -18,7 +18,7 @@ const FaqPage: NextPageWithLayout = () => {
         </title>
         <meta
           name="description"
-          content="Chime Clone Frequently Asked Questions"
+          content="ChimePay Clone Frequently Asked Questions"
         />
       </Head>
 
@@ -46,7 +46,7 @@ const FaqPage: NextPageWithLayout = () => {
           automatically.
         </p>
 
-        <EnrollForm label="Apply Now" />
+        {/* <EnrollForm label="Apply Now" /> */}
 
         <small>Already have an account?</small>
         <small>
@@ -62,7 +62,7 @@ const FaqPage: NextPageWithLayout = () => {
             Frequently Asked Questions
           </FaqPageComponents.Heading>
 
-          <Disclosure label="What is Chime?">
+          <Disclosure label="What is ChimePay?">
             <p>
               At Chime, we&apos;ve created a new approach to online banking that
               doesn&apos;t rely on fees<sup>2</sup>, gets you your paycheck up
@@ -71,12 +71,12 @@ const FaqPage: NextPageWithLayout = () => {
               through Chime, you get a Visa Debit Card<sup>®</sup> and a
               Checking Account that can be managed entirely from your
               smartphone, plus an optional Savings Account that helps you grow
-              your savings automatically! The Chime mobile banking app is
+              your savings automatically! The ChimePay mobile banking app is
               available on both Android and iOS.
             </p>
 
             <p>
-              Chime is a financial technology company, not a bank. Banking
+              ChimePay is a financial technology company, not a bank. Banking
               services provided by The Bancorp Bank or Stride Bank, N.A.;
               Members FDIC.
             </p>
@@ -94,19 +94,19 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </Disclosure>
 
-          <Disclosure label="How does Chime make money?">
+          <Disclosure label="How does ChimePay make money?">
             <p>
-              Chime makes money from the interchange fee charged on card
-              transactions. Every time you use your Chime Visa® Debit Card or
+              ChimePay makes money from the interchange fee charged on card
+              transactions. Every time you use your ChimePay Visa® Debit Card or
               Credit Builder Secured Credit Card for purchases and paying bills,
               Visa processes the transaction and charges an interchange fee to
-              merchants for the service. Chime receives a portion of this fee.
-              This is how Chime can continue building new and better products
+              merchants for the service. ChimePay receives a portion of this fee.
+              This is how ChimePay can continue building new and better products
               that help members get the most from their money.
             </p>
           </Disclosure>
 
-          <Disclosure label="Who can use Chime?">
+          <Disclosure label="Who can use ChimePay ?">
             <p>
               U.S. Citizens 18 years and older are welcome to apply! While Chime
               cards work all over the world, currently we can only offer
@@ -115,7 +115,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </Disclosure>
 
-          <Disclosure label="Does Chime charge any fees?">
+          <Disclosure label="Does ChimePay charge any fees?">
             <p>
               We don&apos;t believe in unnecessary fees or profiting from our
               members&apos; misfortune. We have no fees to sign up, no
@@ -130,13 +130,13 @@ const FaqPage: NextPageWithLayout = () => {
               <i>
                 Please note that third-party services, such as money transfer
                 services used to deposit funds or out of network ATM used to
-                withdraw funds to your Chime Checking Account may impose their
+                withdraw funds to your ChimePay Checking Account may impose their
                 own fees per transaction.
               </i>
             </p>
           </Disclosure>
 
-          <Disclosure label="Does Chime have Fee-Free Overdrafts?">
+          <Disclosure label="Does ChimePay have Fee-Free Overdrafts?">
             <p>
               Yes! Chime&apos;s SpotMe feature lets you make debit card
               purchases and cash withdrawals that overdraw your account with no
@@ -146,20 +146,20 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </Disclosure>
 
-          <Disclosure label="What type of cards does Chime offer?">
+          <Disclosure label="What type of cards does ChimePay offer?">
             <p>
-              When you open a Chime Checking Account you get a Chime Debit Card
+              When you open a ChimePay Checking Account you get a ChimePay Debit Card
               that can be used at any merchant that accepts Visa. Your Chime
               Debit Card can also be used with mobile-payment providers such as
               Apple PayTM, Google PayTM or Samsung PayTM. Other features our
-              members love about our Chime Visa Debit Card are instant
+              members love about our ChimePay Visa Debit Card are instant
               transaction notifications anytime your card is swiped, the ability
               to instantly block your card and order a replacement Debit Card
-              all from within the Chime mobile app.
+              all from within the ChimePay mobile app.
             </p>
 
             <p>
-              The Chime Credit Builder Visa<sup>®</sup> Credit Card is our no
+              The ChimePay Credit Builder Visa<sup>®</sup> Credit Card is our no
               fee, no interest, secured credit card that helps you build your
               credit. Unlike traditional credit cards, Credit Builder helps you
               build credit with no fees and no interest. There&apos;s also no
@@ -173,42 +173,42 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </Disclosure>
 
-          <Disclosure label="When do I receive my Chime Visa Debit Card after I open a Chime Checking Account?">
+          <Disclosure label="When do I receive my ChimePay Visa Debit Card after I open a ChimePay Checking Account?">
             <p>
               After you open a Checking Account, we get started on personalizing
-              your new Chime Visa Debit Card. Your Chime Visa Debit Card is
+              your new ChimePay Visa Debit Card. Your ChimePay Visa Debit Card is
               usually placed in the mail within one (1) business day after you
               open your Checking Account. It can take 5 to 10 business days for
-              your Chime Visa Debit Card to arrive at your home address.
+              your ChimePay Visa Debit Card to arrive at your home address.
             </p>
 
             <p>
-              If you don&apos;t have your Chime Visa Debit Card within 10
+              If you don&apos;t have your ChimePay Visa Debit Card within 10
               business days after opening your Checking Account, please contact
               our Member Services team at: support@Chime.com
             </p>
           </Disclosure>
 
-          <Disclosure label="Is Chime a real bank?">
+          <Disclosure label="Is ChimePay a real bank?">
             <p>
-              Chime is not a bank. Chime is a financial technology company that
+              ChimePay is not a bank. ChimePay is a financial technology company that
               offers banking services provided by The Bancorp Bank or Stride
-              Bank, N.A.; Members FDIC. Chime members can have a Checking
+              Bank, N.A.; Members FDIC. ChimePay members can have a Checking
               Account with an optional Savings Account, and can grow their
-              credit history by applying for a secured Chime Credit Builder Visa
+              credit history by applying for a secured ChimePay Credit Builder Visa
               <sup>®</sup> Credit Card &ndash; all while enjoying the benefits
               of online banking and mobile banking. Eligibility requirements
               apply for Credit Builder card.
             </p>
           </Disclosure>
 
-          <Disclosure label="Is Chime a real bank or prepaid card?">
+          <Disclosure label="Is ChimePay a real bank or prepaid card?">
             <p>
-              Chime is a financial technology company, not a bank. Banking
+              ChimePay is a financial technology company, not a bank. Banking
               services are provided by The Bancorp Bank or Stride Bank, N.A.;
-              Members FDIC. Chime is also not a prepaid card. Through its bank
-              partners, Chime offers a full-service checking account with a
-              Chime Visa<sup>®</sup> Debit Card for spending and using at
+              Members FDIC. ChimePay is also not a prepaid card. Through its bank
+              partners, ChimePay offers a full-service checking account with a
+              ChimePay Visa<sup>®</sup> Debit Card for spending and using at
               60,000+ fee-free in-network ATMs. Out of Network ATM fees apply.
               See Chime.com for more details.
             </p>
@@ -225,7 +225,7 @@ const FaqPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
+        {/* <EnrollForm label="Apply Now" theme="dark" direction="mixed" /> */}
       </MonoSection>
     </>
   );

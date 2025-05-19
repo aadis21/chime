@@ -46,10 +46,10 @@ const HomePage: NextPageWithLayout = () => {
           >
             <h1>ChimePay: Your All-in-One Payment Gateway</h1>
 
-            <EnrollForm
+            {/* <EnrollForm
               direction="mixed"
               ref={e => (inputsRef.current[0] = e as HTMLInputElement)}
-            />
+            /> */}
 
             <small>Already have an account?</small>
             <small>
@@ -74,11 +74,11 @@ const HomePage: NextPageWithLayout = () => {
             }}
           >
             <h1>Build Credit & Earn Rewards with ChimePay</h1>
-
+{/* 
             <EnrollForm
               direction="mixed"
               ref={e => (inputsRef.current[1] = e as HTMLInputElement)}
-            />
+            /> */}
 
             <small>Already have an account?</small>
             <small>
@@ -106,10 +106,10 @@ const HomePage: NextPageWithLayout = () => {
               ChimePay for USA Customers – Simple & Secure<sup>1</sup>
             </h1>
 
-            <EnrollForm
+            {/* <EnrollForm
               direction="mixed"
               ref={e => (inputsRef.current[2] = e as HTMLInputElement)}
-            />
+            /> */}
 
             <small>Already have an account?</small>
             <small>
@@ -137,10 +137,10 @@ const HomePage: NextPageWithLayout = () => {
               Get paid up to 2 days early with direct deposit<sup>2</sup>
             </h1>
 
-            <EnrollForm
+            {/* <EnrollForm
               direction="mixed"
               ref={e => (inputsRef.current[3] = e as HTMLInputElement)}
-            />
+            /> */}
 
             <small>Already have an account?</small>
             <small>
@@ -166,10 +166,10 @@ const HomePage: NextPageWithLayout = () => {
           >
             <h1>No monthly fees</h1>
 
-            <EnrollForm
+            {/* <EnrollForm
               direction="mixed"
               ref={e => (inputsRef.current[4] = e as HTMLInputElement)}
-            />
+            /> */}
 
             <small>Already have an account?</small>
             <small>
@@ -425,7 +425,7 @@ const HomePage: NextPageWithLayout = () => {
           won&apos;t affect your credit score!
         </p>
 
-        <EnrollForm direction="mixed" />
+        {/* <EnrollForm direction="mixed" /> */}
       </DualSection>
     </>
   );

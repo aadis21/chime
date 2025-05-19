@@ -11,8 +11,8 @@ const GetPaidEarlyPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Get Paid Early | Chime</title>
-        <meta name="description" content="Chime Clone Get Paid Early" />
+        <title>Get Paid Early | ChimePay</title>
+        <meta name="description" content="ChimePay  Clone Get Paid Early" />
       </Head>
 
       {/* 1 */}
@@ -67,7 +67,7 @@ const GetPaidEarlyPage: NextPageWithLayout = () => {
         <h2>Grow your savings as you spend</h2>
 
         <p>
-          Saving money is a no-brainer through Chime online banking. Every time
+          Saving money is a no-brainer through ChimePay  online banking. Every time
           you swipe your debit card, we round up to the nearest dollar and
           transfer the round-up from your Checking Account straight into your
           Savings Account. A magical, little way to make your money grow over
@@ -90,11 +90,11 @@ const GetPaidEarlyPage: NextPageWithLayout = () => {
         <h2>How to get paid early with direct deposit</h2>
 
         <p>
-          Chime is more than a get paid early app. We offer a mobile banking
+          ChimePay  is more than a get paid early app. We offer a mobile banking
           account – including early direct deposit<sup>1</sup> – on behalf of
-          our partners. One of the easiest ways to fund your Chime Checking
-          Account is to set up direct deposit, which can be done in the Chime
-          mobile app. When you open an account through Chime, you can email
+          our partners. One of the easiest ways to fund your ChimePay  Checking
+          Account is to set up direct deposit, which can be done in the ChimePay 
+          mobile app. When you open an account through ChimePay , you can email
           yourself a pre-filled direct deposit form that you can hand over to
           your employer. It&apos;s that easy to start getting paid early
           <sup>1</sup> with direct deposit.

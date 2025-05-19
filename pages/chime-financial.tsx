@@ -13,8 +13,8 @@ const FaqPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Chime Financial, Inc. | Chime</title>
-        <meta name="description" content="Chime Clone Financial Inc" />
+        <title>ChimePay Financial, Inc. | Chime</title>
+        <meta name="description" content="ChimePay Clone Financial Inc" />
       </Head>
 
       {/* 1 */}
@@ -44,7 +44,7 @@ const FaqPage: NextPageWithLayout = () => {
         <ChimeFinancialComponents.Section.Content>
           <Disclosure label="Helpful, easy, free" opened>
             <p>
-              Chime is a financial technology company founded on a simple idea:
+              ChimePay is a financial technology company founded on a simple idea:
               everyday banking and payment services should be helpful, easy, and
               free. Our mission is to help our members &ndash; everyday people
               who aren&apos;t well-served by traditional banks &ndash; achieve
@@ -56,15 +56,15 @@ const FaqPage: NextPageWithLayout = () => {
             <p>
               Now more than ever, people are looking for an alternative to
               fee-based banking that&apos;s aligned with their best interests.
-              Chime offers everyday consumers that choice. We helped bring
+              ChimePay offers everyday consumers that choice. We helped bring
               features to market that were unavailable to most consumers just a
               few years ago &ndash; including early access to paychecks,
               accounts with no monthly fees, and fee-free overdrafts up to $200.
               We also offer a secured credit card that enables people to safely
               build credit. And with 60,000+ fee-free ATMs nationwide &ndash; a
               larger network than the four biggest U.S. banks combined &ndash;
-              Chime members never have to look far to access cash. Millions of
-              people trust Chime every day.
+              ChimePay members never have to look far to access cash. Millions of
+              people trust ChimePay every day.
             </p>
           </Disclosure>
 
@@ -83,7 +83,7 @@ const FaqPage: NextPageWithLayout = () => {
             <p>
               Chime&apos;s business reflects that commitment. Instead of fees
               and charges, our revenue comes mainly from transactions, the small
-              amount we earn from Visa when a member uses their Chime card. In
+              amount we earn from Visa when a member uses their ChimePay card. In
               other words, we aim to profit with our members, not from them.
             </p>
           </Disclosure>
@@ -99,7 +99,7 @@ const FaqPage: NextPageWithLayout = () => {
         <ChimeFinancialComponents.Section.Content>
           <Disclosure label="A new, customer-focused approach" opened>
             <p>
-              Chime is different from other financial services companies. We
+              ChimePay is different from other financial services companies. We
               obsess over the needs of our members and live by a set of Core
               Values that guide our actions. We sweat the details of their
               experience and always have their back. The result: nearly half of
@@ -110,7 +110,7 @@ const FaqPage: NextPageWithLayout = () => {
             <br />
 
             <p>
-              Who are Chime members? They&apos;re mainstream consumers, your
+              Who are ChimePay members? They&apos;re mainstream consumers, your
               friends, coworkers and neighbors — everyday people who often
               struggle with the high cost and barriers to entry in traditional
               financial services. This includes young people just entering the
@@ -119,7 +119,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </Disclosure>
 
-          <Disclosure label="Chime Values">
+          <Disclosure label="ChimePay Values">
             <p>
               💚 <b>Be member-obsessed</b>
               <br />
@@ -190,7 +190,7 @@ const FaqPage: NextPageWithLayout = () => {
             <br />
 
             <p>
-              🙋🏽‍♀️ <b>Chime in</b>
+              🙋🏽‍♀️ <b>ChimePay in</b>
               <br />
               As owners, we have an obligation to speak up. We share our ideas,
               ask hard questions, and give candid feedback. When others Chime
@@ -213,14 +213,14 @@ const FaqPage: NextPageWithLayout = () => {
             <p>
               Chime&apos;s business reflects that commitment. Instead of fees
               and charges, our revenue comes mainly from transactions, the small
-              amount we earn from Visa when a member uses their Chime card. In
+              amount we earn from Visa when a member uses their ChimePay card. In
               other words, we aim to profit with our members, not from them.
             </p>
           </Disclosure>
 
           <Disclosure label="Showing up">
             <p>
-              As the COVID-19 pandemic hit, Chime saw the opportunity to make a
+              As the COVID-19 pandemic hit, ChimePay saw the opportunity to make a
               difference and got right to work. We were able to give people
               early access to critical stimulus and unemployment benefit
               payments, often up to five days before traditional banks. This
@@ -242,7 +242,7 @@ const FaqPage: NextPageWithLayout = () => {
         <ChimeFinancialComponents.Section.Content>
           <Disclosure label="More choice, more innovation" opened>
             <p>
-              Chime is not a bank. Instead, we partner with regional banks to
+              ChimePay is not a bank. Instead, we partner with regional banks to
               design and deliver easy-to-use financial products for consumers.
               All of our members&apos; account balances are safely held at
               regulated, FDIC-insured banks, and our products comply with all
@@ -271,10 +271,10 @@ const FaqPage: NextPageWithLayout = () => {
 
           <Disclosure label="Transparent, trusted">
             <p>
-              Nothing is more important at Chime than safeguarding members&apos;
+              Nothing is more important at ChimePay than safeguarding members&apos;
               money and personal information, and we fully comply with the rules
               and regulations put in place to protect consumers. In addition,
-              Chime has made significant investments in people and technology to
+              ChimePay has made significant investments in people and technology to
               ensure we&apos;re a responsible participant within the payments
               and finance ecosystem. That focus allows us to meet our
               commitments to federal and state regulators, our partner banks,
@@ -284,7 +284,7 @@ const FaqPage: NextPageWithLayout = () => {
             <br />
 
             <p>
-              Chime has built a world-class team to manage risk, including
+              ChimePay has built a world-class team to manage risk, including
               experts in cybersecurity, financial fraud, anti-money laundering,
               analytics, underwriting, and machine learning. Our banking
               partners audit our work and we work closely with them to review
@@ -298,10 +298,10 @@ const FaqPage: NextPageWithLayout = () => {
               <b>Bancorp Bank</b> and <b>Stride Bank</b>, as well as their
               regulators, the Federal Deposit Insurance Corporation (FDIC) and
               the Office of the Comptroller of the Currency (OCC). At the
-              federal level, Chime is also subject to the jurisdiction of the
+              federal level, ChimePay is also subject to the jurisdiction of the
               Consumer Financial Protection Bureau (CFPB), the Federal Trade
               Commission (FTC), and the Department of Justice (DOJ). At the
-              state level, Chime is regulated by agencies focused on consumer
+              state level, ChimePay is regulated by agencies focused on consumer
               welfare and financial services.
             </p>
 
@@ -324,7 +324,7 @@ const FaqPage: NextPageWithLayout = () => {
         <ChimeFinancialComponents.Section.Content>
           <Disclosure label="Building a foundation" opened>
             <p>
-              Chime has members in all 50 states, each experiencing their own
+              ChimePay has members in all 50 states, each experiencing their own
               financial triumphs and challenges. We strive to be a resource for
               families, help them stay on top of their finances, avoid
               unnecessary fees and create a solid financial foundation.
@@ -333,7 +333,7 @@ const FaqPage: NextPageWithLayout = () => {
 
           <Disclosure label="Creating impact">
             <p>
-              Chime distributed more than $600,000 in grants in 2020 to support
+              ChimePay distributed more than $600,000 in grants in 2020 to support
               partner organizations, social causes, and COVID-19 and disaster
               relief. This included multi-year grants, unrestricted funding,
               employee matched donations, and grants through our Employee
@@ -343,7 +343,7 @@ const FaqPage: NextPageWithLayout = () => {
             <br />
 
             <p>
-              Chime backs organizations and causes that work for racial and
+              ChimePay backs organizations and causes that work for racial and
               gender-based equity, with the goal of uplifting underrepresented
               groups of people. In the past year, we have given grants to the
               Equal Justice Initiative, Black Girls Code, 100 Black Men, The
@@ -356,7 +356,7 @@ const FaqPage: NextPageWithLayout = () => {
             <br />
 
             <p>
-              As a Pledge 1% member, Chime employees can use 1% of their work
+              As a Pledge 1% member, ChimePay employees can use 1% of their work
               time to volunteer and give back. Chimers can create their own
               volunteer activities and or choose from existing opportunities
               through VolunteerMatch.
@@ -365,7 +365,7 @@ const FaqPage: NextPageWithLayout = () => {
 
           <Disclosure label="Passionate people">
             <p>
-              Chime is headquartered in San Francisco, with offices in Chicago
+              ChimePay is headquartered in San Francisco, with offices in Chicago
               and Vancouver. Although Chimers come from many different
               backgrounds, they have one big thing in common: an abiding passion
               for our mission.
@@ -383,10 +383,10 @@ const FaqPage: NextPageWithLayout = () => {
             <br />
 
             <p>
-              Chime is committed to building a diverse workforce at both the
+              ChimePay is committed to building a diverse workforce at both the
               employee and leadership level. We believe Chime&apos;s open and
               supportive culture inspires our employees to do an even better job
-              serving members. In 2021 alone, Chime was named to Fortune&apos;s
+              serving members. In 2021 alone, ChimePay was named to Fortune&apos;s
               list of Best Small & Medium Workplaces, Best Workplaces for
               Millennials, Best Workplaces in Financial Services and People
               Magazine&apos;s Top 100 Companies that Care list.

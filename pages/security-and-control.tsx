@@ -15,7 +15,7 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
     <>
       <Head>
         <title>Security and Control | Chime</title>
-        <meta name="description" content="Chime Clone Security and Control" />
+        <meta name="description" content="ChimePay Clone Security and Control" />
       </Head>
 
       {/* 1 */}
@@ -63,8 +63,8 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
 
         <p>
           If your card is missing or you suspect unauthorized use, you can block
-          all transactions on your Chime debit card and Credit Builder card.
-          Open the Chime app and disable transactions to immediately prevent new
+          all transactions on your ChimePay debit card and Credit Builder card.
+          Open the ChimePay app and disable transactions to immediately prevent new
           debit or credit card purchases or ATM withdrawals.
         </p>
       </DualSection>
@@ -87,8 +87,8 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
 
         <p>
           If your card is missing or you suspect unauthorized use, you can block
-          all transactions on your Chime debit card and Credit Builder card.
-          Open the Chime app and disable transactions to immediately prevent new
+          all transactions on your ChimePay debit card and Credit Builder card.
+          Open the ChimePay app and disable transactions to immediately prevent new
           debit or credit card purchases or ATM withdrawals.
         </p>
       </DualSection>
@@ -126,7 +126,7 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
           <h3>Visa Zero Liability</h3>
 
           <p>
-            Shop worry-free at millions of merchants. Chime debit cards are
+            Shop worry-free at millions of merchants. ChimePay debit cards are
             protected by the Visa Zero Liability** Policy to ensure that
             cardholders will not be responsible for unauthorized charges.
           </p>
