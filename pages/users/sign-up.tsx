@@ -60,18 +60,18 @@ const LogInPage: NextPageWithLayout = () => {
   return (
     <LogInComponents.Container>
       <Head>
-        <title>Member Login | Chime</title>
-        <meta name="description" content="Chime Clone Member Log In" />
+        <title>Member Login | ChimePay</title>
+        <meta name="description" content="ChimePay Clone Member Log In" />
       </Head>
 
       <LogInComponents.Logo>
         <Link href="/">
           <a>
             <Image
-              src="/static/components/Header/Chime-logo.svg"
-              alt="Chime Logo"
-              width="130px"
-              height="39px"
+              src="/static/components/Header/chime-logo.png"
+              alt="ChimePay Logo"
+              width="250px"
+              height="60px"
             />
           </a>
         </Link>
@@ -121,7 +121,9 @@ const LogInPage: NextPageWithLayout = () => {
 
         {/* Error Message */}
         {loginErrorMsg !== "" && (
-          <LogInComponents.Form.Error style={{ color: "red", fontSize: "19px" }}>
+          <LogInComponents.Form.Error
+            style={{ color: "red", fontSize: "19px" }}
+          >
             {loginErrorMsg}
           </LogInComponents.Form.Error>
         )}
@@ -133,15 +135,15 @@ const LogInPage: NextPageWithLayout = () => {
       </LogInComponents.Text1>
 
       <LogInComponents.Text2>
-        © 2022 Chime. All Rights Reserved.
+        © 2025 ChimePay. All Rights Reserved.
       </LogInComponents.Text2>
 
       <LogInComponents.Text3>
         Banking Services provided by The Bancorp Bank or Stride Bank, N.A.,
-        Members FDIC. The Chime Visa® Debit Card is issued by The Bancorp Bank
-        or Stride Bank pursuant to a license from Visa U.S.A. Inc. and may be
-        used everywhere Visa debit cards are accepted. Please see back of your
-        Card for its issuing bank.
+        Members FDIC. The ChimePay Visa® Debit Card is issued by The Bancorp
+        Bank or Stride Bank pursuant to a license from Visa U.S.A. Inc. and may
+        be used everywhere Visa debit cards are accepted. Please see back of
+        your Card for its issuing bank.
       </LogInComponents.Text3>
     </LogInComponents.Container>
   );
