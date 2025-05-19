@@ -23,7 +23,12 @@ export default class MyDocument extends Document {
 
       return {
         ...initialProps,
-        styles: [initialProps.styles, sheet.getStyleElement()],
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
       };
     } finally {
       sheet.seal();
@@ -32,23 +37,12 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
+          {/* Favicon */}
           <link rel="icon" href="/static/shared/favicon.png" sizes="192x192" />
-          {/* Load Google Analytics */}
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=AW-17086644596"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'AW-17086644596');
-            `}
-          </Script>
-          {/* <title>ChimePay - Secure & Instant Money Transfers</title> */}
+
+          {/* Meta tags for SEO */}
           <meta
             name="description"
             content="ChimePay offers secure, fee-free instant money transfers. Send money to anyone, anytime, with no sign-up required."
@@ -58,6 +52,10 @@ export default class MyDocument extends Document {
             content="ChimePay, instant money transfer, fee-free payments, send money online, secure payments"
           />
           <meta name="author" content="ChimePay Team" />
+          <meta name="robots" content="index, follow" />
+
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
           <meta
             property="og:title"
             content="ChimePay - Secure & Instant Money Transfers"
@@ -66,12 +64,13 @@ export default class MyDocument extends Document {
             property="og:description"
             content="ChimePay offers secure, fee-free instant money transfers. Send money to anyone, anytime, with no sign-up required."
           />
+          <meta property="og:url" content="https://chimepay.in" />
           <meta
             property="og:image"
             content="https://chimepay.in/images/og-image.jpg"
           />
-          <meta property="og:url" content="https://chimepay.in" />
-          <meta property="og:type" content="website" />
+
+          {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:title"
@@ -85,10 +84,44 @@ export default class MyDocument extends Document {
             name="twitter:image"
             content="https://chimepay.in/images/twitter-image.jpg"
           />
+
+          {/* Structured Data JSON-LD for Organization */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "ChimePay",
+                url: "https://chimepay.in",
+                logo: "https://chimepay.in/static/shared/favicon.png",
+                sameAs: [
+                  "https://www.facebook.com/ChimePay",
+                  "https://twitter.com/ChimePay",
+                  // Add other social URLs if available
+                ],
+              }),
+            }}
+          />
         </Head>
 
         <body>
           <Main />
+
+          {/* Google Analytics */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17086644596"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17086644596', { page_path: window.location.pathname });
+            `}
+          </Script>
+
           <NextScript />
         </body>
       </Html>
