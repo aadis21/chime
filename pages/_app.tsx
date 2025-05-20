@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   return getLayout(
     <>
       <Script
-        src="https://code.tidio.co/vnwob2f98yg1hx5s3iki3nasqccqowqp.js"
+        src="https://code.tidio.co/txhutegul2hetezslra6papeluu91nse.js"
         strategy="afterInteractive"
       />
       <GlobalStyle />
