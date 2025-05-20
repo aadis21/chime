@@ -3,18 +3,18 @@
 > [archived Chime website](/assets/comparison.md).
 
 <p align="center">
-  <a href="https://Chime-clone.vercel.app/" target="_blank">
+  <a href="https://Chime-pay.vercel.app/" target="_blank">
     <img
-      alt="Chime Clone"
-      title="Chime Clone"
-      src="/assets/Chime-clone-logo.svg"
+      alt="Chime pay"
+      title="Chime pay"
+      src="/assets/Chime-pay-logo.svg"
       width="300"
       style="max-width: 100%;"
     /.
   </a>
   <br /><br />
   <b align="center">
-    <a href="https://Chime-clone.vercel.app/">Clone</a> of the
+    <a href="https://Chime-pay.vercel.app/">pay</a> of the
     <a href="https://www.Chime.com/">Chime</a> website;
   </b>
   <br />
@@ -34,7 +34,7 @@
 
 ## Introduction 👀
 
-Chime Clone is a clone of the [Chime](https://www.Chime.com/) website developed
+Chime pay is a pay of the [Chime](https://www.Chime.com/) website developed
 solely by [@kon-pas](https://github.com/kon-pas) with the purpose of
 **self-learning web development**.
 
@@ -47,7 +47,7 @@ _WordPress_ website.
 **Head to [comparison.md](/assets/comparison.md) for the comparison index,
 including archived Chime website.**
 
-Alternatively, visit [Chime Clone](https://Chime-clone.vercel.app/) &
+Alternatively, visit [Chime pay](https://Chime-pay.vercel.app/) &
 [Chime Originial](https://www.Chime.com/).
 
 ## Tech Stack 💻
