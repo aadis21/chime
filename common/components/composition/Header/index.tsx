@@ -74,9 +74,9 @@ const Header: FC = () => {
         </Styled.MenuContainerDesktop>
 
         <nav>
-          <Link href="/users/sign-up">
+          {/* <Link href="/users/sign-up">
             <Styled.Button>Sign In</Styled.Button>
-          </Link>
+          </Link> */}
 
           <Styled.Button onClick={openTidioChat}>
             Contact Us
@@ -103,7 +103,7 @@ const Header: FC = () => {
               <Image
                 src="/static/components/Header/chime-logo.png"
                 alt="Chime Logo"
-                width={90}
+                width={100}
                 height={30}
               />
             </h1>
@@ -138,11 +138,11 @@ const Header: FC = () => {
           </menu>
         </Styled.MenuContainer>
 
-        {!user && (
-          <Styled.AccountActions>
-            <div onClick={() => navigate("/users/log-in")}>Sign In</div>
-          </Styled.AccountActions>
-        )}
+        {/* {!user && (
+          // <Styled.AccountActions>
+          //   <div onClick={() => navigate("/users/log-in")}>Sign In</div>
+          // </Styled.AccountActions>
+        )} */}
       </Styled.ModalContainer>
     </>
   );
