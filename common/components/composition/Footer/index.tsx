@@ -89,7 +89,7 @@ const Footer: FC = () => {
         <Styled.DisclaimerSection>
          
 
-          <p>© 2013-2025 Chime. All Rights Reserved.</p>
+          <p>© 025 ChimePay. All Rights Reserved.</p>
         </Styled.DisclaimerSection>
       </ContentContainer>
     </Styled.Footer>
