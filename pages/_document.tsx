@@ -110,7 +110,7 @@ export default class MyDocument extends Document {
 
           {/* Google Analytics */}
           <Script
-            src="https://www.googletagmanager.com/gtag/js?id=AW-17086644596"
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17118766209"
             strategy="afterInteractive"
           />
           <Script id="google-analytics" strategy="afterInteractive">
@@ -118,10 +118,9 @@ export default class MyDocument extends Document {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-17086644596', { page_path: window.location.pathname });
+              gtag('config', 'AW-17118766209');
             `}
           </Script>
-
           <NextScript />
         </body>
       </Html>
