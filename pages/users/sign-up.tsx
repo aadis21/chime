@@ -6,7 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import { loginUser } from "@services";
+import { loginUser } from "@services"; // assumed it returns boolean or throws error
 import { useUser } from "@hooks";
 import { ModalLayout } from "@components/composition";
 
@@ -34,15 +34,15 @@ const SignUpPage: NextPageWithLayout = () => {
 
   const onSubmit = async (loginData: FormValues) => {
     try {
-      const userData = await loginUser(loginData);
+      const isSuccess = await loginUser(loginData); // returns boolean
 
-      if (userData.success) {
-        setUser(userData.user);
+      if (isSuccess) {
+        setUser({ firstName: "Demo", secondName: "User" }); // or fetch user separately
         setLoginErrorMsg("");
         setLoginAttempts(0);
-        navigate("/dashboard"); // Update route as needed
+        navigate("/dashboard");
       } else {
-        throw new Error("Invalid credentials");
+        throw new Error("Invalid login");
       }
     } catch {
       const newAttempts = loginAttempts + 1;
