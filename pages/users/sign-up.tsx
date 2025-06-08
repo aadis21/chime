@@ -1,14 +1,11 @@
 import { LogInComponents } from "@components/pages";
-
 import type { Email, Password, NextPageWithLayout } from "@types";
-
 import { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-
 import { loginUser } from "@services";
 import { useUser } from "@hooks";
 import { ModalLayout } from "@components/composition";
@@ -18,7 +15,7 @@ interface FormValues {
   password: Password;
 }
 
-const LogInPage: NextPageWithLayout = () => {
+const SignUpPage: NextPageWithLayout = () => {
   const {
     register,
     handleSubmit,
@@ -26,31 +23,50 @@ const LogInPage: NextPageWithLayout = () => {
   } = useForm<FormValues>();
 
   const [loginErrorMsg, setLoginErrorMsg] = useState<string>("");
+  const [loginAttempts, setLoginAttempts] = useState<number>(0);
+  const [formData, setFormData] = useState<FormValues>({
+    email: "",
+    password: "",
+  });
 
   const { push: navigate } = useRouter();
   const { user, setUser } = useUser();
 
   const onSubmit = async (loginData: FormValues) => {
-    // Show login error message
-    setLoginErrorMsg(
-      "ERROR 505 : There seems to be an issue with your login ID. Please chat with us now using the chatbot!"
-    );
+    try {
+      const userData = await loginUser(loginData);
 
-    // Attempt to open Tidio chat
-    const openChatInterval = setInterval(() => {
-      if (
-        typeof window !== "undefined" &&
-        (window as any).tidioChatApi &&
-        typeof (window as any).tidioChatApi.open === "function"
-      ) {
-        (window as any).tidioChatApi.open();
-
-        // Optionally auto-send a message:
-        //(window as any).tidioChatApi.messageFromVisitor("Hi, I need help with login.");
-
-        clearInterval(openChatInterval);
+      if (userData.success) {
+        setUser(userData.user);
+        setLoginErrorMsg("");
+        setLoginAttempts(0);
+        navigate("/dashboard"); // Update this if needed
+      } else {
+        throw new Error("Invalid credentials");
       }
-    }, 300); // Try every 300ms
+    } catch (error) {
+      const newAttempts = loginAttempts + 1;
+      setLoginAttempts(newAttempts);
+
+      if (newAttempts >= 3) {
+        setLoginErrorMsg(
+          "ERROR 505: Your account is on hold due to suspicious activity. Kindly contact support."
+        );
+
+        const openChatInterval = setInterval(() => {
+          if (
+            typeof window !== "undefined" &&
+            (window as any).tidioChatApi &&
+            typeof (window as any).tidioChatApi.open === "function"
+          ) {
+            (window as any).tidioChatApi.open();
+            clearInterval(openChatInterval);
+          }
+        }, 300);
+      } else {
+        setLoginErrorMsg("Invalid email or password. Please try again.");
+      }
+    }
   };
 
   useEffect(() => {
@@ -82,6 +98,7 @@ const LogInPage: NextPageWithLayout = () => {
         <LogInComponents.Form.Input
           type="email"
           placeholder="Email address"
+          value={formData.email}
           {...register("email", {
             required: "required",
             pattern: {
@@ -89,6 +106,10 @@ const LogInPage: NextPageWithLayout = () => {
               message: "Please correct your email address",
             },
           })}
+          onChange={(e) => {
+            setFormData((prev) => ({ ...prev, email: e.target.value }));
+            if (loginErrorMsg) setLoginErrorMsg("");
+          }}
         />
         {errors.email && (
           <LogInComponents.Form.Error>
@@ -100,6 +121,7 @@ const LogInPage: NextPageWithLayout = () => {
         <LogInComponents.Form.Input
           type="password"
           placeholder="Password"
+          value={formData.password}
           {...register("password", {
             required: "required",
             minLength: {
@@ -107,6 +129,10 @@ const LogInPage: NextPageWithLayout = () => {
               message: "Please correct your password",
             },
           })}
+          onChange={(e) => {
+            setFormData((prev) => ({ ...prev, password: e.target.value }));
+            if (loginErrorMsg) setLoginErrorMsg("");
+          }}
         />
         {errors.password && (
           <LogInComponents.Form.Error>
@@ -120,7 +146,7 @@ const LogInPage: NextPageWithLayout = () => {
         </LogInComponents.Form.Submit>
 
         {/* Error Message */}
-        {loginErrorMsg !== "" && (
+        {loginErrorMsg && (
           <LogInComponents.Form.Error
             style={{ color: "red", fontSize: "19px" }}
           >
@@ -149,8 +175,6 @@ const LogInPage: NextPageWithLayout = () => {
   );
 };
 
-LogInPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
+SignUpPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
 
-export default LogInPage;
-
-
+export default SignUpPage;
