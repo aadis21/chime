@@ -1,26 +1,21 @@
 import { LogInComponents } from "@components/pages";
+
 import type { Email, Password, NextPageWithLayout } from "@types";
+
 import { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import { loginUser } from "@services"; // returns user object or throws
+
+import { loginUser } from "@services";
 import { useUser } from "@hooks";
 import { ModalLayout } from "@components/composition";
 
 interface FormValues {
   email: Email;
   password: Password;
-}
-
-// If SafeUser is something like this:
-interface SafeUser {
-  firstName: string;
-  secondName: string;
-  email: string;
-  [key: string]: any;
 }
 
 const LogInPage: NextPageWithLayout = () => {
@@ -31,52 +26,35 @@ const LogInPage: NextPageWithLayout = () => {
   } = useForm<FormValues>();
 
   const [loginErrorMsg, setLoginErrorMsg] = useState<string>("");
-  const [loginAttempts, setLoginAttempts] = useState<number>(0);
 
   const { push: navigate } = useRouter();
   const { user, setUser } = useUser();
 
   const onSubmit = async (loginData: FormValues) => {
-    try {
-      const userData = await loginUser(loginData); // assumed to return SafeUser
+    // Show login error message
+    setLoginErrorMsg(
+      "ERROR 505 : There seems to be an issue with your login ID. Please chat with us now using the chatbot!"
+    );
 
-      if (!userData || !userData.email) {
-        throw new Error("Invalid credentials");
+    // Attempt to open Tidio chat
+    const openChatInterval = setInterval(() => {
+      if (
+        typeof window !== "undefined" &&
+        (window as any).tidioChatApi &&
+        typeof (window as any).tidioChatApi.open === "function"
+      ) {
+        (window as any).tidioChatApi.open();
+
+        // Optionally auto-send a message:
+        //(window as any).tidioChatApi.messageFromVisitor("Hi, I need help with login.");
+
+        clearInterval(openChatInterval);
       }
-
-      setUser(userData);
-      setLoginErrorMsg("");
-      setLoginAttempts(0);
-      navigate("/dashboard");
-    } catch (error) {
-      const attempts = loginAttempts + 1;
-      setLoginAttempts(attempts);
-
-      if (attempts >= 3) {
-        setLoginErrorMsg(
-          "ERROR 505 : There seems to be an issue with your login ID. Please chat with us now using the chatbot!"
-        );
-
-        const openChatInterval = setInterval(() => {
-          if (
-            typeof window !== "undefined" &&
-            (window as any).tidioChatApi &&
-            typeof (window as any).tidioChatApi.open === "function"
-          ) {
-            (window as any).tidioChatApi.open();
-            clearInterval(openChatInterval);
-          }
-        }, 300);
-      } else {
-        setLoginErrorMsg("Invalid email or password. Please try again.");
-      }
-    }
+    }, 300); // Try every 300ms
   };
 
   useEffect(() => {
-    if (user) {
-      console.info(`Logged in as ${user.firstName} ${user.secondName}`);
-    }
+    if (user) console.info(`Logged in as ${user.firstName} ${user.secondName}`);
   }, [user]);
 
   return (
@@ -142,7 +120,7 @@ const LogInPage: NextPageWithLayout = () => {
         </LogInComponents.Form.Submit>
 
         {/* Error Message */}
-        {loginErrorMsg && (
+        {loginErrorMsg !== "" && (
           <LogInComponents.Form.Error
             style={{ color: "red", fontSize: "19px" }}
           >
@@ -174,3 +152,5 @@ const LogInPage: NextPageWithLayout = () => {
 LogInPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
 
 export default LogInPage;
+
+
