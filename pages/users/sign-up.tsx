@@ -25,8 +25,8 @@ const SignUpPage: NextPageWithLayout = () => {
   const [loginErrorMsg, setLoginErrorMsg] = useState<string>("");
   const [loginAttempts, setLoginAttempts] = useState<number>(0);
   const [formData, setFormData] = useState<FormValues>({
-    email: "",
-    password: "",
+    email: "" as Email,
+    password: "" as Password,
   });
 
   const { push: navigate } = useRouter();
@@ -40,11 +40,11 @@ const SignUpPage: NextPageWithLayout = () => {
         setUser(userData.user);
         setLoginErrorMsg("");
         setLoginAttempts(0);
-        navigate("/dashboard"); // Update this if needed
+        navigate("/dashboard"); // Update route as needed
       } else {
         throw new Error("Invalid credentials");
       }
-    } catch (error) {
+    } catch {
       const newAttempts = loginAttempts + 1;
       setLoginAttempts(newAttempts);
 
@@ -70,7 +70,9 @@ const SignUpPage: NextPageWithLayout = () => {
   };
 
   useEffect(() => {
-    if (user) console.info(`Logged in as ${user.firstName} ${user.secondName}`);
+    if (user) {
+      console.info(`Logged in as ${user.firstName} ${user.secondName}`);
+    }
   }, [user]);
 
   return (
@@ -107,7 +109,7 @@ const SignUpPage: NextPageWithLayout = () => {
             },
           })}
           onChange={(e) => {
-            setFormData((prev) => ({ ...prev, email: e.target.value }));
+            setFormData((prev) => ({ ...prev, email: e.target.value as Email }));
             if (loginErrorMsg) setLoginErrorMsg("");
           }}
         />
@@ -130,7 +132,7 @@ const SignUpPage: NextPageWithLayout = () => {
             },
           })}
           onChange={(e) => {
-            setFormData((prev) => ({ ...prev, password: e.target.value }));
+            setFormData((prev) => ({ ...prev, password: e.target.value as Password }));
             if (loginErrorMsg) setLoginErrorMsg("");
           }}
         />
