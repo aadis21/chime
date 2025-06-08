@@ -179,4 +179,4 @@ const SignUpPage: NextPageWithLayout = () => {
 
 SignUpPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
 
-export default SignUpPage;
+export default LogInPage;
