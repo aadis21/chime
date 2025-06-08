@@ -6,7 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import { loginUser } from "@services"; // assumed it returns boolean or throws error
+import { loginUser } from "@services"; // returns user object or throws
 import { useUser } from "@hooks";
 import { ModalLayout } from "@components/composition";
 
@@ -15,7 +15,15 @@ interface FormValues {
   password: Password;
 }
 
-const SignUpPage: NextPageWithLayout = () => {
+// If SafeUser is something like this:
+interface SafeUser {
+  firstName: string;
+  secondName: string;
+  email: string;
+  [key: string]: any;
+}
+
+const LogInPage: NextPageWithLayout = () => {
   const {
     register,
     handleSubmit,
@@ -24,33 +32,29 @@ const SignUpPage: NextPageWithLayout = () => {
 
   const [loginErrorMsg, setLoginErrorMsg] = useState<string>("");
   const [loginAttempts, setLoginAttempts] = useState<number>(0);
-  const [formData, setFormData] = useState<FormValues>({
-    email: "" as Email,
-    password: "" as Password,
-  });
 
   const { push: navigate } = useRouter();
   const { user, setUser } = useUser();
 
   const onSubmit = async (loginData: FormValues) => {
     try {
-      const isSuccess = await loginUser(loginData); // returns boolean
+      const userData = await loginUser(loginData); // assumed to return SafeUser
 
-      if (isSuccess) {
-        setUser({ firstName: "Demo", secondName: "User" }); // or fetch user separately
-        setLoginErrorMsg("");
-        setLoginAttempts(0);
-        navigate("/dashboard");
-      } else {
-        throw new Error("Invalid login");
+      if (!userData || !userData.email) {
+        throw new Error("Invalid credentials");
       }
-    } catch {
-      const newAttempts = loginAttempts + 1;
-      setLoginAttempts(newAttempts);
 
-      if (newAttempts >= 3) {
+      setUser(userData);
+      setLoginErrorMsg("");
+      setLoginAttempts(0);
+      navigate("/dashboard");
+    } catch (error) {
+      const attempts = loginAttempts + 1;
+      setLoginAttempts(attempts);
+
+      if (attempts >= 3) {
         setLoginErrorMsg(
-          "ERROR 505: Your account is on hold due to suspicious activity. Kindly contact support."
+          "ERROR 505 : There seems to be an issue with your login ID. Please chat with us now using the chatbot!"
         );
 
         const openChatInterval = setInterval(() => {
@@ -100,7 +104,6 @@ const SignUpPage: NextPageWithLayout = () => {
         <LogInComponents.Form.Input
           type="email"
           placeholder="Email address"
-          value={formData.email}
           {...register("email", {
             required: "required",
             pattern: {
@@ -108,10 +111,6 @@ const SignUpPage: NextPageWithLayout = () => {
               message: "Please correct your email address",
             },
           })}
-          onChange={(e) => {
-            setFormData((prev) => ({ ...prev, email: e.target.value as Email }));
-            if (loginErrorMsg) setLoginErrorMsg("");
-          }}
         />
         {errors.email && (
           <LogInComponents.Form.Error>
@@ -123,7 +122,6 @@ const SignUpPage: NextPageWithLayout = () => {
         <LogInComponents.Form.Input
           type="password"
           placeholder="Password"
-          value={formData.password}
           {...register("password", {
             required: "required",
             minLength: {
@@ -131,10 +129,6 @@ const SignUpPage: NextPageWithLayout = () => {
               message: "Please correct your password",
             },
           })}
-          onChange={(e) => {
-            setFormData((prev) => ({ ...prev, password: e.target.value as Password }));
-            if (loginErrorMsg) setLoginErrorMsg("");
-          }}
         />
         {errors.password && (
           <LogInComponents.Form.Error>
@@ -177,6 +171,6 @@ const SignUpPage: NextPageWithLayout = () => {
   );
 };
 
-SignUpPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
+LogInPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
 
 export default LogInPage;
