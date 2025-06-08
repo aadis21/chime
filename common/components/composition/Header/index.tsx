@@ -74,9 +74,9 @@ const Header: FC = () => {
         </Styled.MenuContainerDesktop>
 
         <nav>
-          {/* <Link href="/users/sign-up">
+          <Link href="/users/sign-up">
             <Styled.Button>Sign In</Styled.Button>
-          </Link> */}
+          </Link>
 
           <Styled.Button onClick={openTidioChat}>
             Contact Us
