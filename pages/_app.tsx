@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import GlobalStyle from "@styles/GlobalStyle.styled";
-import type { AppProps } from "next/app";
-import type { NextPageWithLayout } from "@types";
-import Script from "next/script";
-import { Loader } from "@components/composition";
+// import { useEffect } from "react";
+// import GlobalStyle from "@styles/GlobalStyle.styled";
+// import type { AppProps } from "next/app";
+// import type { NextPageWithLayout } from "@types";
+// import Script from "next/script";
+// import { Loader } from "@components/composition";
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
